@@ -1,6 +1,6 @@
 # [Astro](https://astro.build) Background Removal (powered by [Replicate](https://replicate.com/pollinations/modnet))
 
-![Demo](https://user-images.githubusercontent.com/44473/212442872-302cf8e2-d7a8-4962-a714-957ebcf6c71e.png)
+![Demo](https://user-images.githubusercontent.com/44473/213626165-3840e93f-90e3-4dea-ac72-26599a4586a1.png)
 
 ## 🚀 Getting Started
 
