@@ -1,81 +1,73 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from '../layouts/Layout.astro'
+import Form from '../components/Form'
+import Logo from '../components/Logo.astro'
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
+<Layout title="AI Background Removal">
+  <div>
+    <div class="px-6 pt-6 lg:px-8">
+      <div>
+        <nav class="flex h-9 items-center justify-between" aria-label="Global">
+          <div class="flex lg:min-w-0 lg:flex-1" aria-label="Global">
+            <Logo />
+          </div>
+        </nav>
+      </div>
+    </div>
+    <main>
+      <div class="relative px-6 lg:px-8">
+        <div class="mx-auto max-w-3xl pt-20 pb-32 sm:pt-32 sm:pb-40">
+          <div>
+            <div>
+              <h1
+                class="text-4xl font-bold tracking-tight sm:text-center sm:text-6xl"
+              >
+                AI Background Removal
+              </h1>
+              <p
+                class="mt-6 mb-6 text-lg leading-8 text-gray-600 sm:text-center"
+              >
+                Check out the source code on <a
+                  href="https://github.com/Charca/astro-stable-diffusion"
+                  target="_blank"
+                  rel="noopener">GitHub</a
+                >. Powered by <a
+                  href="https://replicate.com/stability-ai/stable-diffusion"
+                  target="_blank"
+                  rel="noopener">Replicate</a
+                >, <a href="https://astro.build" target="_blank" rel="noopener"
+                  >Astro</a
+                >, <a
+                  href="https://preactjs.com/"
+                  target="_blank"
+                  rel="noopener">Preact</a
+                >, and <a
+                  href="https://tailwindcss.com/"
+                  target="_blank"
+                  rel="noopener">Tailwind</a
+                >. <br /> Demo by <a
+                  href="https://twitter.com/charca"
+                  target="_blank"
+                  rel="noopener">Maxi Ferreira</a
+                >.
+              </p>
+
+              <Form client:load />
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
 </Layout>
 
-<style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
+<style is:global>
+  a {
+    color: rgb(79 70 229 / var(--tw-text-opacity));
+  }
+
+  a:hover {
+    color: rgb(99 102 241 / var(--tw-text-opacity));
+  }
 </style>
